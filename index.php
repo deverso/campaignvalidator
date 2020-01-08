@@ -26,12 +26,12 @@ if (isset($_POST['term'])) {
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="border border-primary rounded">
+    <!-- <div class="border border-primary rounded"> -->
       <h1>Campaign Validator</h1>
       <div class="alert alert-<?=$result['type']?>" role="alert" style="display: <?=$result['display']?>">
         <?=$result['text']?>
       </div>
-      <form>
+      <form method="post">
         <div class="form-group">
           <label for="exampleInputEmail1">Campaign</label>
           <input type="text" name="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -42,6 +42,6 @@ if (isset($_POST['term'])) {
         </div>
         <button type="submit" class="btn btn-primary">Validar</button>
       </form>
-    </div>
+    <!-- </div> -->
   </body>
 </html>
