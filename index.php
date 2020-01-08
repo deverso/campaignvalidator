@@ -47,7 +47,7 @@ if (isset($_POST['term'])) {
               <input type="text" name="term" class="form-control" value="<?=$_POST['term']?>" autocomplete="off" />
               <small id="emailHelp" class="form-text text-muted">&bull; ser numérico de 8 à 9 caracteres</small>
               <small id="emailHelp" class="form-text text-muted">&bull; ser alfanumérico de 24 caracteres (não pode ter espaço)</small>
-              <small id="emailHelp" class="form-text text-muted">&bull; conter em qualquer posição o texto .BRM ex: Campain.home-70%off.BRN-thing</small>
+              <small id="emailHelp" class="form-text text-muted">&bull; conter em qualquer posição o texto .BRM ex: Campain.home-70%off.BRM-thing</small>
               <small id="emailHelp" class="form-text text-muted">&bull; começar com o prefixo KD e ser seguido de 6 dpigitos numéridos ex:KD123456</small>
               <button type="submit" class="btn btn-primary">Validar</button>
             </div>
