@@ -13,6 +13,7 @@ if (isset($_POST['term'])) {
 }
 
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,26 +23,32 @@ if (isset($_POST['term'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <style>
+      .bg {
+        background-color: #d6d9dc;
+      }
+    </style>
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- <div class="border border-primary rounded"> -->
-      <h1>Campaign Validator</h1>
-      <div class="alert alert-<?=$result['type']?>" role="alert" style="display: <?=$result['display']?>">
-        <?=$result['text']?>
-      </div>
-      <form method="post">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Campaign</label>
-          <input type="text" name="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">&bull; ser numérico de 8 à 9 caracteres</small>
-          <small id="emailHelp" class="form-text text-muted">&bull; ser alfanumérico de 24 caracteres (não pode ter espaço)</small>
-          <small id="emailHelp" class="form-text text-muted">&bull; conter em qualquer posição o texto .BRM ex: Campain.home-70%off.BRN-thing</small>
-          <small id="emailHelp" class="form-text text-muted">&bull; começar com o prefixo KD e ser seguido de 6 dpigitos numéridos ex:KD123456</small>
+      <div class="container align-self-center">
+        <div class="border border-light rounded col-12 mt-5 bg">
+          <h2>Campaign Validator</h2>
+          <div class="alert alert-<?=$result['type']?>" role="alert" style="display: <?=$result['display']?>">
+            <?=$result['text']?>
+          </div>
+          <form method="post">
+            <div class="form-group">
+              <input type="text" name="text" class="form-control">
+              <small id="emailHelp" class="form-text text-muted">&bull; ser numérico de 8 à 9 caracteres</small>
+              <small id="emailHelp" class="form-text text-muted">&bull; ser alfanumérico de 24 caracteres (não pode ter espaço)</small>
+              <small id="emailHelp" class="form-text text-muted">&bull; conter em qualquer posição o texto .BRM ex: Campain.home-70%off.BRN-thing</small>
+              <small id="emailHelp" class="form-text text-muted">&bull; começar com o prefixo KD e ser seguido de 6 dpigitos numéridos ex:KD123456</small>
+              <button type="submit" class="btn btn-primary">Validar</button>
+            </div>
+          </form>
         </div>
-        <button type="submit" class="btn btn-primary">Validar</button>
-      </form>
-    <!-- </div> -->
+      </div>
   </body>
 </html>
+
