@@ -34,7 +34,7 @@ if (isset($_POST['term'])) {
       <div class="container align-self-center">
         <div class="border border-light rounded col-12 mt-5 bg">
           <h2>Campaign Validator</h2>
-          <div class="alert alert-<?=$result['type']?>" role="alert" style="display: <?=$result['display']?>">
+          <div class="alert alert-<?=$result['type']?> alert-dismissible fade show" role="alert" style="display: <?=$result['display']?>">
             <?=$result['text']?>
           </div>
           <form method="post">
