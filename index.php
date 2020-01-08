@@ -39,7 +39,7 @@ if (isset($_POST['term'])) {
           </div>
           <form method="post">
             <div class="form-group">
-              <input type="text" name="term" class="form-control">
+              <input type="text" name="term" class="form-control" value="<?=$result['term']?>" />
               <small id="emailHelp" class="form-text text-muted">&bull; ser numérico de 8 à 9 caracteres</small>
               <small id="emailHelp" class="form-text text-muted">&bull; ser alfanumérico de 24 caracteres (não pode ter espaço)</small>
               <small id="emailHelp" class="form-text text-muted">&bull; conter em qualquer posição o texto .BRM ex: Campain.home-70%off.BRN-thing</small>
