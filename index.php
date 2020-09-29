@@ -1,5 +1,6 @@
 <?php
-$campaignPatterns = '(^[\d]{8,9}$|^[\w]{24}$|.*\.BRM.*|KD[\d]{6}$)';
+// OLD $campaignPatterns = '(^[\d]{8,9}$|^[\w]{24}$|.*\.BRM.*|KD[\d]{6}$)';
+$campaignPatterns = '/(^[\d]{8,9}$|^[\w]{24}$|.*\.BRM.*|KD[\d]{6}$|^mp_[\d]{6}$|^br_[\d]{6}$|^tr_)/i';
 $result["display"] = 'none';
 
 if (isset($_POST['term'])) {
